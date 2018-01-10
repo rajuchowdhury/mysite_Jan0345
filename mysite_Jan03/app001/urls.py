@@ -8,8 +8,8 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
 path('admin/', admin.site.urls),
-path('library/', include('library.urls')),
-path('/', RedirectView.as_view(url='/library/', permanent=True)),
+path('app001/', include('app001.urls')),
+path('/', RedirectView.as_view(url='/app001/', permanent=True)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns = [
